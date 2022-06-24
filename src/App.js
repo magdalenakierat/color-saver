@@ -6,15 +6,15 @@ function App() {
   const colorObjects = [
     {
       id: "234",
-      colorCode: "#ccc",
+      colorCode: "#25B2D9",
     },
     {
       id: "235",
-      colorCode: "#ccd",
+      colorCode: "#A23A24",
     },
     {
       id: "236",
-      colorCode: "#cce",
+      colorCode: "#879F18",
     },
   ];
 
