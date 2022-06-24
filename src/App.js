@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import ColorCard from "./components/ColorCard/ColorCard";
 
@@ -18,12 +18,19 @@ function App() {
     },
   ];
 
+  const [cards, setCards] = useState(colorObjects);
+
+  function addNewCard(value){
+    setCards(value)
+  }
+
+
   return (
     <>
       <div className="card-container">
         <ColorCard
-          colorObjects={colorObjects}
-          style={{ backgroundColor: colorObjects[0].colorCode }}
+          colorObjects={cards}
+          addNewCard={addNewCard}
         />
       </div>
     </>
