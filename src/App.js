@@ -22,19 +22,24 @@ function App() {
   ];
 
   const [cards, setCards] = useState(colorObjects);
+  const [newCard, setNewCard] = useState();
+
+  function editCard(value){
+    setCards(value)
+  }
 
   function addNewCard(value){
-    setCards(value)
+    setNewCard(value)
   }
 
 
   return (
     <>
       <div className="card-container">
-        <CardForm/>
+        <CardForm newCard={newCard} addNewCard={addNewCard}/>
         <ColorCard
           colorObjects={cards}
-          addNewCard={addNewCard}
+          editCard={editCard}
         />
       </div>
     </>

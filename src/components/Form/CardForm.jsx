@@ -4,21 +4,17 @@ import {nanoid} from "nanoid";
 
 
 
-export default function CardForm({ colorObjects, addNewCard }) {
+export default function CardForm({ newCard, addNewCard }) {
   
     return (
        
             <form onSubmit={(e)=>{
                 e.preventDefault();
-
-                const inputValue = e.target.elements[0].value;
-                const colorStyle = e.target.children[0].style.backgroundColor = inputValue;
-                console.log(colorStyle)
+                                                
             }}>
-            <article className="card" >
+            <article className="card" style={{ backgroundColor: newCard }}>
                 <input type="text" className="card__input" onChange={(e)=>{
-                const newCard = {id:nanoid(),colorCode:e.target.value}
-                console.info();
+                addNewCard(e.target.value);
                 //addNewCard(newCard);
             }}>
             </input>
