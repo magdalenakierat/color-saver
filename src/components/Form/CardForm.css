@@ -1,6 +1,11 @@
 .card__button-add {
-    position: relative;
-    width: 80px;
-    margin-top: 5px;
-  }
-  
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  border: 5 black;
+}
+
+.card__button-add:hover {
+  background-color: #fecb98;
+  transform: scale(1.1);
+}

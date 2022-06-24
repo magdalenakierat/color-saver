@@ -1,7 +1,6 @@
 .card {
-  border: 1px solid black;
-  height: 150px;
-  width: 150px;
+  height: 250px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -9,16 +8,30 @@
   justify-content: center;
   justify-items: center;
   flex-wrap: wrap;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
 .card__input {
   align-self: center;
   text-align: center;
-  width: 80px;
+  width: 120px;
+  height: 40px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 20px;
 }
 
 .card__button-delete {
-  top: -70px;
-  right: -60px;
+  top: -142px;
+  right: -103px;
   position: relative;
+  background-color: white;
+  border-radius: 50%;
+  border: 5 black;
+  text-align: center;
+}
+
+.card__button-delete:hover {
+  background-color: #98fffe;
+  transform: scale(1.1);
 }
