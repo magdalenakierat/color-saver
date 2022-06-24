@@ -15,3 +15,9 @@
   text-align: center;
   width: 80px;
 }
+
+.card__button-delete {
+  top: -70px;
+  right: -60px;
+  position: relative;
+}

@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import "./App.css";
 import ColorCard from "./components/ColorCard/ColorCard";
+import CardForm from "./components/Form/CardForm";
+import {nanoid} from "nanoid";
+
 
 function App() {
   const colorObjects = [
     {
-      id: "234",
+      id: nanoid(),
       colorCode: "#25B2D9",
     },
     {
-      id: "235",
+      id: nanoid(),
       colorCode: "#A23A24",
     },
     {
-      id: "236",
+      id: nanoid(),
       colorCode: "#879F18",
     },
   ];
@@ -28,6 +31,7 @@ function App() {
   return (
     <>
       <div className="card-container">
+        <CardForm/>
         <ColorCard
           colorObjects={cards}
           addNewCard={addNewCard}

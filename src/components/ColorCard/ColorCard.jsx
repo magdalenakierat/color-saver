@@ -7,21 +7,19 @@ export default function ColorCard({ colorObjects, addNewCard }) {
     colorObjects.map((colorObject) => {
       return (
       <article key={colorObject.id} className="card" style={{ backgroundColor: colorObject.colorCode }}>
-        <input type="text" className="card__input" value={colorObject.colorCode} onChange={(event) => {
-              
+        <div>{colorObject.id}</div>
+        <input type="text" className="card__input" value={colorObject.colorCode} onChange={(event) => {              
               addNewCard(
                 colorObjects.map((colorObject_) => colorObject_.id === colorObject.id ? { ...colorObject_, colorCode: event.target.value } : colorObject_)
-              );
-            
+              );         
               
-            }}></input>
+            }}>
+        </input>
+        <button className="card__button-delete">X</button>
       </article>
       )
 
     })
   );
-
-
-
 
 }
