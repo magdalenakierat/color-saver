@@ -14,7 +14,9 @@ export default function ColorCard({ colorObjects, editCard }) {
               
             }}>
         </input>
-        <button className="card__button-delete">X</button>
+        <button className="card__button-delete" onClick={()=>{
+            editCard(colorObjects.filter((colorObjects_) => colorObjects_.id !== colorObject.id));
+        }}>X</button>
       </article>
       )
 
