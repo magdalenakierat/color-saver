@@ -4,7 +4,7 @@ import { nanoid } from "nanoid";
 
 export default function CardForm({
   colorChange,
-  addNewCard,
+  changeCardColor,
   cardObjects,
   editCard,
 }) {
@@ -21,12 +21,13 @@ export default function CardForm({
         console.log(test2);
       }}
     >
+      
       <article className="card" style={{ backgroundColor: colorChange }}>
         <input
           type="text"
           className="card__input"
           onChange={(e) => {
-            addNewCard(e.target.value);
+            changeCardColor(e.target.value);
           }}
         ></input>
         <button className="card__button-add">ADD</button>
