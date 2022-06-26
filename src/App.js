@@ -27,11 +27,7 @@ function App() {
     setCards(value);
   }
 
-  function test(value) {
-    setCards({ value, ...cards });
-  }
-
-  function addNewCard(value) {
+  function changeCardColor(value) {
     setColorChange(value);
   }
 
@@ -42,7 +38,7 @@ function App() {
       <div className="card-container">
         <CardForm
           colorChange={colorChange}
-          addNewCard={addNewCard}
+          changeCardColor={changeCardColor}
           cardObjects={cards}
           editCard={editCard}
         />
