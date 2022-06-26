@@ -13,12 +13,9 @@ export default function CardForm({
       onSubmit={(e) => {
         e.preventDefault();
         const textInput = e.target.elements[0].value;
-        let newCard = { id: nanoid(), colorCode: textInput };
+        let newCard = [...cardObjects,{ id: nanoid(), colorCode: textInput }];
 
-        let test2 = cardObjects;
-        test2.push(newCard);
-        editCard(test2);
-        console.log(test2);
+        editCard(newCard);
       }}
     >
       
