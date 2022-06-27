@@ -22,8 +22,10 @@
 }
 
 .card__button-delete {
-  top: -142px;
-  right: -103px;
+  width: 30px;
+  height: 30px;
+  top: -156px;
+  right: -101px;
   position: relative;
   background-color: white;
   border-radius: 50%;
@@ -31,15 +33,19 @@
   text-align: center;
 }
 
-.card__button-delete:hover {
-  background-color: #98fffe;
-  transform: scale(1.1);
-}
-
-.card__button-copy{
-  background-color: transparent;
-  top: -130px;
+.card__button-copy {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  top: -127px;
   left: -100px;
   position: relative;
-  border: 0 black;
+  border: 5 black;
+}
+
+.card__button-delete:hover,
+.card__button-copy:hover {
+  background-color: #fecb98;
+  transform: scale(1.1);
 }
